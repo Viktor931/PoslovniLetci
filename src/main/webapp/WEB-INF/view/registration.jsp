@@ -1,7 +1,9 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
@@ -32,21 +34,41 @@ $(document).ready(function() {
 	<nav>
 	</nav>
 	<main id="sadrzaj">
-        <form action="" method="post">
-            <label for="name">First name:</label>
-            <input type="text" name="name" id="name">
-            <label for="lastName">Last name:</label>
-            <input type="text" name="lastName" id="lastName">
-            <label for="username">Username: </label><label id="usernameTaken">ALREADY TAKEN</label>
-            <input type="text" name="username" id="username" required>
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" required>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-            <label for="password2">Confirm password:</label>
-            <input type="password" name="password2" id="password" required>
-            <input type="submit" value="Send" id="button">
-        </form>
+	    <form:form method="POST" action="" modelAttribute="registrationForm">
+        <table>
+            <tr>
+                <td><form:label path="name">Name</form:label></td>
+                <td><form:input path="name" value="${model.registrationForm.name}"/></td>
+            </tr>
+            <tr>
+                <td><form:label path="lastName">Last Name</form:label></td>
+                <td><form:input path="lastName" value="${model.registrationForm.lastName}"/></td>
+            </tr>
+            <tr>
+                <td><form:label path="username">Username</form:label><div id="usernameTaken">USERNAME TAKEN</div></td>
+                <td><form:input path="username" id="username" value="${model.registrationForm.username}"/></td>
+            </tr>
+            <tr>
+                <td><form:label path="email">Email</form:label></td>
+                <td><form:input path="email" value="${model.registrationForm.email}" type="email"/></td>
+            </tr>
+            <tr>
+                <td><form:label path="password">Password</form:label></td>
+                <td><form:input path="password" value="${model.registrationForm.password}" type="password"/></td>
+            </tr>
+            <tr>
+                <td><form:label path="password2">Confirm password</form:label></td>
+                <td><form:input path="password2" value="${model.registrationForm.password2}" type="password"/></td>
+            </tr>
+            <tr>
+                <div class="g-recaptcha"
+                          data-sitekey="${recaptchaSiteKey}"></div>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"/></td>
+            </tr>
+        </table>
+        </form:form>
 	</main>
 
 	<footer id="podnozje">
