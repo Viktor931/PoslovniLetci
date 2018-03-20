@@ -1,5 +1,6 @@
 package business.flyers.Controllers;
 
+import business.flyers.Constants.Constants;
 import business.flyers.Exceptions.RecaptchaServiceException;
 import business.flyers.Services.DefaultUserDetailsService;
 import business.flyers.Services.RecaptchaService;
@@ -16,6 +17,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping(value = {"/registration"})
@@ -51,19 +53,29 @@ public class RegistrationController {
 
     @GetMapping
     public ModelAndView registration(WebRequest request, Model model){
-        ModelAndView result = new ModelAndView("registration");
-        result.addObject("registrationForm", new RegistrationForm());
+        ModelAndView result = new ModelAndView("registration", "registrationForm", new RegistrationForm());
+        populateErrorMessages(result);
         return result;
     }
 
+    private void populateErrorMessages(ModelAndView result) {
+        result.addObject("usernameTaken", Constants.Registration.Error.USERNAME_TAKEN);
+        result.addObject("passwordsNotEqual", Constants.Registration.Error.PASSWORDS_NOT_EQUAL);
+        result.addObject("nameCapitalLetter", Constants.Registration.Error.NAME_CAPITAL_LETTER);
+        result.addObject("lastNameCapitalLetter", Constants.Registration.Error.LAST_NAME_CAPITAL_LETTER);
+        result.addObject("passwordErrors", Constants.Registration.Error.PASSWORD_ERRORS);
+    }
+
     @PostMapping
-    public ModelAndView verifyRegistration(WebRequest request, Model model, @ModelAttribute("form") RegistrationForm registrationForm, @RequestParam(name="g-recaptcha-response") String recaptchaResponse){
+    public ModelAndView verifyRegistration(WebRequest request, Model model, @ModelAttribute("form") @Valid RegistrationForm registrationForm, @RequestParam(name="g-recaptcha-response") String recaptchaResponse){
         if(recaptchaService.isResponseValid(httpServletRequest.getRemoteAddr(), recaptchaResponse)){
             return new ModelAndView("home");
         } else {
             registrationForm.setPassword("");
             registrationForm.setPassword2("");
-            return new ModelAndView("registration", "registrationForm", registrationForm);
+            ModelAndView result = new ModelAndView("registration", "registrationForm", registrationForm);
+            populateErrorMessages(result);
+            return result;
         }
     }
 }

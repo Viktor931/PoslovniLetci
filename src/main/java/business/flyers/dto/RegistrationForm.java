@@ -1,5 +1,8 @@
 package business.flyers.dto;
 
+import business.flyers.Constants.Constants;
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.validation.constraints.NotEmpty;
 
 public class RegistrationForm {

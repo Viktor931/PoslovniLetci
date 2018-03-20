@@ -1,100 +1,95 @@
 package business.flyers.Controllers;
 
+import business.flyers.Services.DefaultUserDetailsService;
 import business.flyers.Services.RecaptchaService;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
+import business.flyers.Validators.RegistrationFormValidator;
+import business.flyers.dto.RegistrationForm;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.util.ReflectionTestUtils;
-import org.springframework.test.web.servlet.MockMvc;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.ui.Model;
+import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Arrays;
+import javax.servlet.http.HttpServletRequest;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.when;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@AutoConfigureMockMvc
+@RunWith(MockitoJUnitRunner.class)
 public class RegistrationControllerTest {
-    @Autowired
+    @InjectMocks
     private RegistrationController registrationController;
-    @Autowired
-    private MockMvc mockMvc;
-    @Autowired
+    @Mock
+    private DefaultUserDetailsService userDetailsService;
+    @Mock
+    private RegistrationFormValidator registrationFormValidator;
+    @Mock
     private RecaptchaService recaptchaService;
+    @Mock
+    private HttpServletRequest httpServletRequest;
+    @Value("${recaptcha.site-key}")
+    private static final String recaptchaKey = "";
 
-    @Test
-    public void contexLoads() throws Exception {
-        assertThat(registrationController).isNotNull();
-    }
-    @Test
-    public void testAjaxNameCheck() throws Exception {
-        this.mockMvc.perform(post("/registration/nameCheck").contentType(MediaType.APPLICATION_JSON).content("admin")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("true")));
-        this.mockMvc.perform(post("/registration/nameCheck").contentType(MediaType.APPLICATION_JSON).content("invalidName")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("false")));
-    }
-    @Test
-    public void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get("/registration")).andDo(print()).andExpect(status().isOk());
-        this.mockMvc.perform(get("/registration")).andReturn().getResponse().getForwardedUrl().equals("/WEB-INF/view/registration.jsp");
-        this.mockMvc.perform(get("/registration")).andExpect(model().attribute("registrationForm", notNullValue()));
-    }
-    @Test
-    public void testRecaptchaInvalidFormSubmission() throws Exception {
-        ReflectionTestUtils.setField(recaptchaService, "recaptchaSecretKey", "${recaptcha.secret-key}");
-        mockMvc.perform(post("/registration")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(
-                        new BasicNameValuePair("name", "a"),
-                        new BasicNameValuePair("lastName", "a"),
-                        new BasicNameValuePair("username", "a"),
-                        new BasicNameValuePair("email", "a"),
-                        new BasicNameValuePair("password", "a"),
-                        new BasicNameValuePair("password2", "a"),
-                        new BasicNameValuePair("g-recaptcha-response", "a")
-                ))))).andReturn().getResponse().getForwardedUrl().equals("/WEB-INF/view/registration.jsp");
-        this.mockMvc.perform(post("/registration")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(
-                        new BasicNameValuePair("name", "a"),
-                        new BasicNameValuePair("lastName", "a"),
-                        new BasicNameValuePair("username", "a"),
-                        new BasicNameValuePair("email", "a"),
-                        new BasicNameValuePair("password", "a"),
-                        new BasicNameValuePair("password2", "a"),
-                        new BasicNameValuePair("g-recaptcha-response", "a")
-                ))))).andExpect(model().attribute("registrationForm", notNullValue()));
+    @Before
+    public void init(){
+        when(userDetailsService.loadUserByUsername("InvalidUsername")).thenThrow(UsernameNotFoundException.class);
+        when(userDetailsService.loadUserByUsername("ValidUsername")).thenReturn(Mockito.mock(UserDetails.class));
+        when(recaptchaService.isResponseValid(httpServletRequest.getRemoteAddr(), "ValidResponse")).thenReturn(true);
+        when(recaptchaService.isResponseValid(httpServletRequest.getRemoteAddr(), "InvalidResponse")).thenReturn(false);
     }
 
     @Test
-    public void testRecaptchaValidFormSubmission() throws Exception {
-        ReflectionTestUtils.setField(recaptchaService, "recaptchaSecretKey", "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe");
-        mockMvc.perform(post("/registration")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(
-                        new BasicNameValuePair("name", "a"),
-                        new BasicNameValuePair("lastName", "a"),
-                        new BasicNameValuePair("username", "a"),
-                        new BasicNameValuePair("email", "a"),
-                        new BasicNameValuePair("password", "a"),
-                        new BasicNameValuePair("password2", "a"),
-                        new BasicNameValuePair("g-recaptcha-response", "a")
-                ))))).andReturn().getResponse().getForwardedUrl().equals("/WEB-INF/view/home.jsp");
+    public void testRecaptchaSiteKey(){
+        Assert.assertEquals(registrationController.getRecaptchaSiteKey(recaptchaKey), recaptchaKey);
+    }
+
+    @Test
+    public void testRegistrationNameCheck(){
+        Assert.assertFalse(registrationController.registrationNameCheck("InvalidUsername"));
+        Assert.assertTrue(registrationController.registrationNameCheck("ValidUsername"));
+    }
+
+    @Test
+    public void testGetRegistration(){
+        ModelAndView modelAndView = registrationController.registration(Mockito.mock(WebRequest.class), Mockito.mock(Model.class));
+        Assert.assertTrue(modelAndView.getViewName().equals("registration"));
+        Assert.assertTrue(modelAndView.getModel().containsKey("registrationForm"));
+        checkErrorMessages(modelAndView);
+    }
+
+    @Test
+    public void testPostRegistration(){
+        Assert.assertTrue(registrationController.verifyRegistration(Mockito.mock(WebRequest.class), Mockito.mock(Model.class), new RegistrationForm(), "ValidResponse").getViewName().equals("home"));
+
+        ModelAndView invalidModelAndView = registrationController.verifyRegistration(Mockito.mock(WebRequest.class), Mockito.mock(Model.class), new RegistrationForm(), "InvalidResponse");
+        Assert.assertTrue(invalidModelAndView.getViewName().equals("registration"));
+        Assert.assertTrue(invalidModelAndView.getModel().containsKey("registrationForm"));
+        checkErrorMessages(invalidModelAndView);
+    }
+
+    private void checkErrorMessages(ModelAndView invalidModelAndView) {
+        Assert.assertTrue(invalidModelAndView.getModel().containsKey("usernameTaken"));
+        Assert.assertTrue(invalidModelAndView.getModel().containsKey("passwordsNotEqual"));
+        Assert.assertTrue(invalidModelAndView.getModel().containsKey("nameCapitalLetter"));
+        Assert.assertTrue(invalidModelAndView.getModel().containsKey("lastNameCapitalLetter"));
+        Assert.assertTrue(invalidModelAndView.getModel().containsKey("passwordErrors"));
+    }
+
+    @Test
+    public void testInitDatabinder(){
+        WebDataBinder webDataBinder = Mockito.mock(WebDataBinder.class);
+        registrationController.initBinder(webDataBinder);
+        Mockito.verify(webDataBinder, times(1)).addValidators(registrationFormValidator);
     }
 }
