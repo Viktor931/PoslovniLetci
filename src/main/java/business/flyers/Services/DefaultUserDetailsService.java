@@ -9,6 +9,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 @Service
 public class DefaultUserDetailsService implements UserDetailsService {
 
@@ -22,5 +26,14 @@ public class DefaultUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException(username);
         }
         return new DefaultUserDetails(user);
+    }
+
+    public List<DefaultUserDetails> getUsers(int from, int to) {
+        return userModelRepository.findAll().subList(from, to > userModelRepository.count() ? (int) userModelRepository.count() : to)
+                .stream().map(x -> new DefaultUserDetails(x)).collect(Collectors.toList());
+    }
+
+    public int countUsers(){
+        return (int) userModelRepository.count();
     }
 }

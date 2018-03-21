@@ -18,7 +18,7 @@ public class DefaultUserDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> auths = new java.util.ArrayList<SimpleGrantedAuthority>();
-        auths.add(new SimpleGrantedAuthority(userModel.getUserGroup()));
+        auths.add(new SimpleGrantedAuthority("ROLE_" + userModel.getUserGroup()));
         return auths;
     }
 
@@ -50,5 +50,9 @@ public class DefaultUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public UserModel getUserModel(){
+        return userModel;
     }
 }

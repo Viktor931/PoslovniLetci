@@ -24,10 +24,12 @@ public class DefaultUserDetailsTest {
         userModel.setUserGroup("a");
         userModel.setUsername("a");
         userModel.setPassword("a");
+        userModel.setEmail("a");
         DefaultUserDetails userDetails = new DefaultUserDetails(userModel);
-        Assert.assertEquals(((List<SimpleGrantedAuthority>)userDetails.getAuthorities()).get(0).getAuthority(), userModel.getUserGroup());
+        Assert.assertEquals(((List<SimpleGrantedAuthority>)userDetails.getAuthorities()).get(0).getAuthority(), "ROLE_" + userModel.getUserGroup());
         Assert.assertEquals(userDetails.getPassword(), userModel.getPassword());
         Assert.assertEquals(userDetails.getUsername(), userModel.getUsername());
+        Assert.assertEquals(userDetails.getUserModel().getEmail(), userModel.getEmail());
         Assert.assertEquals(userDetails.isAccountNonExpired() && userDetails.isAccountNonLocked() && userDetails.isCredentialsNonExpired() && userDetails.isEnabled(), true);
     }
 }

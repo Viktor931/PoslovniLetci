@@ -70,18 +70,13 @@ $(document).ready(function() {
     });
 });
 </script>
-<style>
-.error{
-	background-color: #FBC44D;
-}
-</style>
 </head>
 <body>
 	<header>
 	</header>
 	<nav>
 	</nav>
-	<main id="sadrzaj">
+	<main>
 	    <form:form method="POST" action="" modelAttribute="registrationForm">
         <table>
             <tr>
