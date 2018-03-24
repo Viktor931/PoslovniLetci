@@ -19,8 +19,7 @@ $(document).ready(function() {
             url: "/registration/nameCheck",
             data: $('#username').val(),
             contentType: "text/plain"
-        })
-            .done(function( data ) {
+        }).done(function( data ) {
                 if ( data == true ) {
                     $('#username')[0].setCustomValidity("Username taken");
                 } else {

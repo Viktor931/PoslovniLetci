@@ -3,21 +3,25 @@ package business.flyers;
 import business.flyers.Constants.Constants;
 import business.flyers.Entities.UserModel;
 import business.flyers.Repositories.UserModelRepository;
+import business.flyers.dto.DefaultUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDateTime;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @EnableWebSecurity
 public class SecurityConfig {
@@ -45,9 +49,19 @@ public class SecurityConfig {
                     .and()
                     .formLogin()
                     .loginPage("/login")
+                    .successHandler(new CookieAuthenticationSuccessHandler())
                     .permitAll();
 
             http.csrf().disable();
+        }
+
+        class CookieAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+
+            @Override
+            public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+                Cookie cookie = new Cookie("user", ((DefaultUserDetails) authentication.getPrincipal()).getUserModel().getFirstName());
+                httpServletResponse.addCookie(cookie);
+            }
         }
     }
 
@@ -65,8 +79,6 @@ public class SecurityConfig {
         admin.setEmail("admin");
         admin.setPassword(passwordEncoder.encode("admin"));
         admin.setUserGroup(Constants.User.Role.ADMIN);
-        admin.setSignUpDate(LocalDateTime.now());
-        admin.setActivationKey("111111");
         UserModel moderator = new UserModel();
         moderator.setFirstName("moderator");
         moderator.setLastName("moderator");
