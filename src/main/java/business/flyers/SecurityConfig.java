@@ -17,6 +17,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.annotation.PostConstruct;
+import java.time.LocalDateTime;
 
 @EnableWebSecurity
 public class SecurityConfig {
@@ -39,7 +40,7 @@ public class SecurityConfig {
         protected void configure(HttpSecurity http) throws Exception {
             http
                     .authorizeRequests()
-                    .antMatchers("/registration", "/registration/nameCheck").permitAll()
+                    .antMatchers("/registration/**").permitAll()
                     .anyRequest().authenticated()
                     .and()
                     .formLogin()
@@ -64,6 +65,8 @@ public class SecurityConfig {
         admin.setEmail("admin");
         admin.setPassword(passwordEncoder.encode("admin"));
         admin.setUserGroup(Constants.User.Role.ADMIN);
+        admin.setSignUpDate(LocalDateTime.now());
+        admin.setActivationKey("111111");
         UserModel moderator = new UserModel();
         moderator.setFirstName("moderator");
         moderator.setLastName("moderator");

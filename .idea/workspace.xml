@@ -2,27 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37837e33-0b8c-4ff6-a6b0-517296fafb96" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/PrivatnoController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Services/PaginationService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/privatno.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/PrivatnoControllerTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Services/PaginationServiceTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_0_0_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Populators/UserModelPopulator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Services/EmailService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Populators/UserModelPopulatorTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Services/EmailServiceTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Poslovniletci.iml" afterPath="$PROJECT_DIR$/Poslovniletci.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserModel.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserModel.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/Repositories/UserModelRepository.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Repositories/UserModelRepository.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java" afterPath="$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/flyers/dto/UserDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserModelTest.java" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserModelTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/business/flyers/Services/DefaultUserDetailsServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/Services/DefaultUserDetailsServiceTest.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java" afterPath="$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$Registration$Error.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$Registration$Error.class" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/business/flyers/dto/UserDTOTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$Pagination.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$Pagination.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$Registration.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$Registration.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$User$Role.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$User$Role.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$User.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Constants/Constants$User.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Controllers/RegistrationController.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Controllers/RegistrationController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Entities/UserModel.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Entities/UserModel.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/MvcConfig.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/MvcConfig.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Repositories/UserModelRepository.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Repositories/UserModelRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/SecurityConfig$RegularWebSecurityConfigurerAdapter.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/SecurityConfig$RegularWebSecurityConfigurerAdapter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/SecurityConfig$WebSecurityConfigurationAdapter.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/SecurityConfig$WebSecurityConfigurationAdapter.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/SecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/SecurityConfig.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Services/DefaultUserDetailsService.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Services/DefaultUserDetailsService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/Validators/RegistrationFormValidator.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/Validators/RegistrationFormValidator.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/dto/DefaultUserDetails.class" afterPath="$PROJECT_DIR$/target/classes/business/flyers/dto/DefaultUserDetails.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/flyers/dto/UserDTO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/business/flyers/Controllers/RegistrationControllerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/business/flyers/Controllers/RegistrationControllerTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/business/flyers/Entities/UserModelTest.class" afterPath="$PROJECT_DIR$/target/test-classes/business/flyers/Entities/UserModelTest.class" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/business/flyers/Services/DefaultUserDetailsServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/business/flyers/Services/DefaultUserDetailsServiceTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/business/flyers/Validators/RegistrationFormValidatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/business/flyers/Validators/RegistrationFormValidatorTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/business/flyers/dto/DefaultUserDetailsTest.class" afterPath="$PROJECT_DIR$/target/test-classes/business/flyers/dto/DefaultUserDetailsTest.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/business/flyers/dto/UserDTOTest.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,16 +74,20 @@
     <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationFormValidatorTest.coverage" NAME="RegistrationFormValidatorTest Coverage Results" MODIFIED="1521580236294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Validators.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerIntegrationTest_and_14_more.coverage" NAME="RegistrationControllerIntegrationTest and 14 more Coverage Results" MODIFIED="1521858223054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Business_Flyers$RecaptchaServiceTest.coverage" NAME="RecaptchaServiceTest Coverage Results" MODIFIED="1521407029958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Services.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Business_Flyers$UserModelTest.coverage" NAME="UserModelTest Coverage Results" MODIFIED="1521407091714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Business_Flyers$DefaultUserDetailsServiceTest_createUser.coverage" NAME="DefaultUserDetailsServiceTest.createUser Coverage Results" MODIFIED="1521838126966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>business.flyers.Services.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Business_Flyers$UserModelTest.coverage" NAME="UserModelTest Coverage Results" MODIFIED="1521829189822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Entities.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Business_Flyers$LoginControllerTest.coverage" NAME="LoginControllerTest Coverage Results" MODIFIED="1521401865779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Controllers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Business_Flyers$BusinessFlyersTest.coverage" NAME="BusinessFlyersTest Coverage Results" MODIFIED="1521673002299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Business_Flyers$BusinessFlyersTest.coverage" NAME="BusinessFlyersTest Coverage Results" MODIFIED="1521858264275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Business_Flyers$UserDTOTest.coverage" NAME="UserDTOTest Coverage Results" MODIFIED="1521407102529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -77,12 +109,21 @@
     <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerTest_and_12_more.coverage" NAME="RegistrationControllerTest and 12 more Coverage Results" MODIFIED="1521407974596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Business_Flyers$LoginControllerTest_and_1_more.coverage" NAME="LoginControllerTest and 1 more Coverage Results" MODIFIED="1521407132658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Business_Flyers$LoginControllerTest_and_13_more.coverage" NAME="LoginControllerTest and 13 more Coverage Results" MODIFIED="1521569093552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Business_Flyers$DefaultUserDetailsServiceTest.coverage" NAME="DefaultUserDetailsServiceTest Coverage Results" MODIFIED="1521407054848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerIntegrationTest_and_13_more.coverage" NAME="RegistrationControllerIntegrationTest and 13 more Coverage Results" MODIFIED="1521672898866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Business_Flyers$DefaultUserDetailsServiceTest.coverage" NAME="DefaultUserDetailsServiceTest Coverage Results" MODIFIED="1521859136951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Services.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerIntegrationTest_and_13_more.coverage" NAME="RegistrationControllerIntegrationTest and 13 more Coverage Results" MODIFIED="1521672898866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerTest.coverage" NAME="RegistrationControllerTest Coverage Results" MODIFIED="1521566306400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Business_Flyers$DefaultUserDetailsServiceTest_testInvalidActivation.coverage" NAME="DefaultUserDetailsServiceTest.testInvalidActivation Coverage Results" MODIFIED="1521859255285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>business.flyers.Services.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerTest_testValidActivationKey.coverage" NAME="RegistrationControllerTest.testValidActivationKey Coverage Results" MODIFIED="1521858529899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationControllerTest.coverage" NAME="RegistrationControllerTest Coverage Results" MODIFIED="1521858350697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>business.flyers.Controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Business_Flyers$EmailServiceTest_testSendEmail.coverage" NAME="EmailServiceTest.testSendEmail Coverage Results" MODIFIED="1521858962547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>business.flyers.Services.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Business_Flyers$RegistrationFormValidatorTest_testInvalidForm.coverage" NAME="RegistrationFormValidatorTest.testInvalidForm Coverage Results" MODIFIED="1521579131950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>business.flyers.Validators.*</FILTER>
@@ -102,78 +143,8 @@
       <file leaf-file-name="DefaultUserDetailsServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/DefaultUserDetailsServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="47" column="179" lean-forward="true" selection-start-line="47" selection-start-column="179" selection-end-line="47" selection-end-column="179" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultUserDetailsTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="32" column="173" lean-forward="false" selection-start-line="32" selection-start-column="173" selection-end-line="32" selection-end-column="173" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultUserDetailsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-              <folding>
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1436#1437#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultUserDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-              <folding>
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#1353#1354#0" expanded="true" />
-                <element signature="e#1385#1386#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrivatnoController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/PrivatnoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="privatno.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/privatno.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            <state relative-caret-position="17">
+              <caret line="46" column="88" lean-forward="false" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -182,9 +153,11 @@
       <file leaf-file-name="RegistrationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="185">
+              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,18 +165,68 @@
       <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="31" column="135" lean-forward="false" selection-start-line="31" selection-start-column="135" selection-end-line="31" selection-end-column="135" />
+            <state relative-caret-position="234">
+              <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrivatnoControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/PrivatnoControllerTest.java">
+      <file leaf-file-name="DefaultUserDetailsService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="147" lean-forward="false" selection-start-line="25" selection-start-column="147" selection-end-line="25" selection-end-column="147" />
+            <state relative-caret-position="285">
+              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MvcConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="119" column="40" lean-forward="false" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultUserDetailsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="98" column="87" lean-forward="true" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/EmailServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -222,6 +245,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tomca</find>
+      <find>passwordencoder</find>
+      <find>authenticationManager</find>
+      <find>//</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -235,57 +261,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/dto/UserDTO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserGroupModelTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserGroupModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/BusinessFlyersApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Repositories/UserModelRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Repositories/UserModelRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/MvcWebApplicationInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/SecurityWebApplicationInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/LoginController.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/dto/UserDTOTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/LoginControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/RegistrationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/a.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/MyUserPrincipal.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/RegistrationServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserPrincipal.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetails.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserModelTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Validators/a.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Validators/RecaptchaFormValidator.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Exception/RecaptchaServiceExceptionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/dto/RegistrationFormTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Exceptions/RecaptchaServiceException.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/RecaptchaService.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/RecaptchaServiceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Exceptions/RecaptchaServiceExceptionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/dto/RegistrationForm.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Validators/RegistrationFormValidator.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/Integration/RegistrationControllerIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Validators/RegistrationFormValidatorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/PaginationServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/PaginationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/PrivatnoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/privatno.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/PrivatnoControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/DefaultUserDetailsServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/LoginControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Repositories/UserModelRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Exceptions/InvalidActivationKeyException.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/RegistrationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/RegistrationService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/RegistrationServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserModelTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/Populators/UserModelPopulator.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Validators/RegistrationFormValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/EmailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Populators/UserModelPopulator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/Populators/UserModelPopulatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Populators/UserModelPopulatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserModel.java" />
         <option value="$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/EmailServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Services/DefaultUserDetailsServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java" />
       </list>
     </option>
   </component>
@@ -302,7 +328,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="946" />
     <option name="y" value="26" />
     <option name="width" value="974" />
@@ -326,9 +352,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -407,6 +432,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="flyers" type="462c0819:PsiDirectoryNode" />
               <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Business Flyers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Poslovniletci" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="flyers" type="462c0819:PsiDirectoryNode" />
+              <item name="Populators" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Business Flyers" type="b2602c69:ProjectViewProjectNode" />
@@ -540,6 +574,15 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="flyers" type="462c0819:PsiDirectoryNode" />
+              <item name="Populators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Business Flyers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Poslovniletci" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="flyers" type="462c0819:PsiDirectoryNode" />
               <item name="Repositories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -564,6 +607,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,25 +619,26 @@
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="business.flyers.Services" />
-      <recent name="business.flyers.Controllers" />
-      <recent name="business.flyers.Exceptions" />
-      <recent name="business.flyers.Entities" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="business.flyers.dto" />
-      <recent name="business.flyers" />
-      <recent name="business.flyers.Controllers" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="business.flyers.Repositories" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Viktor\Desktop\radionica\Poslovniletci\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\Viktor\Desktop\radionica\Poslovniletci\src\main\webapp\META-INF\pages" />
       <recent name="C:\Users\Viktor\Desktop\radionica\Poslovniletci\src\main\webapp\META-INF" />
       <recent name="C:\Users\Viktor\Desktop\radionica\Poslovniletci\src\main\webapp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="business.flyers" />
+      <recent name="business.flyers.dto" />
+      <recent name="business.flyers.Controllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="business.flyers.Repositories" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="business.flyers.Controllers.Populators" />
+      <recent name="business.flyers.Services" />
+      <recent name="business.flyers.Controllers" />
+      <recent name="business.flyers.Exceptions" />
+      <recent name="business.flyers.Entities" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -608,13 +653,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DefaultUserDetailsTest.testUserDetails">
+  <component name="RunManager" selected="Application.BusinessFlyersApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="BusinessFlyersApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="business.flyers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="business.flyers.BusinessFlyersApplication" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Poslovniletci" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -630,32 +694,7 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="BusinessFlyersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="business.flyers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Poslovniletci" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="business.flyers" />
-      <option name="MAIN_CLASS_NAME" value="business.flyers.BusinessFlyersTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="DefaultUserDetailsServiceTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DefaultUserDetailsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="business.flyers.Services.*" />
@@ -667,56 +706,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="business.flyers.Services" />
       <option name="MAIN_CLASS_NAME" value="business.flyers.Services.DefaultUserDetailsServiceTest" />
-      <option name="METHOD_NAME" value="testGetAllUsers" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="DefaultUserDetailsTest.testUserDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="business.flyers.dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Poslovniletci" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="business.flyers.dto" />
-      <option name="MAIN_CLASS_NAME" value="business.flyers.dto.DefaultUserDetailsTest" />
-      <option name="METHOD_NAME" value="testUserDetails" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="PrivatnoControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="business.flyers.Controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Poslovniletci" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="business.flyers.Controllers" />
-      <option name="MAIN_CLASS_NAME" value="business.flyers.Controllers.PrivatnoControllerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -730,15 +719,20 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="RegistrationControllerIntegrationTest and 13 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="DefaultUserDetailsServiceTest.testInvalidActivation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="business.flyers.Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Poslovniletci" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="pattern" />
+      <option name="PACKAGE_NAME" value="business.flyers.Services" />
+      <option name="MAIN_CLASS_NAME" value="business.flyers.Services.DefaultUserDetailsServiceTest" />
+      <option name="METHOD_NAME" value="testInvalidActivation" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -748,22 +742,57 @@
         <value defaultName="singleModule" />
       </option>
       <envs />
-      <patterns>
-        <pattern testClass="business.flyers.Controllers.Integration.RegistrationControllerIntegrationTest" />
-        <pattern testClass="business.flyers.Controllers.LoginControllerTest" />
-        <pattern testClass="business.flyers.Controllers.PrivatnoControllerTest" />
-        <pattern testClass="business.flyers.Controllers.RegistrationControllerTest" />
-        <pattern testClass="business.flyers.dto.DefaultUserDetailsTest" />
-        <pattern testClass="business.flyers.dto.RegistrationFormTest" />
-        <pattern testClass="business.flyers.dto.UserDTOTest" />
-        <pattern testClass="business.flyers.Entities.UserModelTest" />
-        <pattern testClass="business.flyers.Exception.RecaptchaServiceExceptionTest" />
-        <pattern testClass="business.flyers.Repositories.UserModelRepositoryTest" />
-        <pattern testClass="business.flyers.Services.DefaultUserDetailsServiceTest" />
-        <pattern testClass="business.flyers.Services.PaginationServiceTest" />
-        <pattern testClass="business.flyers.Services.RecaptchaServiceTest" />
-        <pattern testClass="business.flyers.Validators.RegistrationFormValidatorTest" />
-      </patterns>
+      <patterns />
+    </configuration>
+    <configuration name="EmailServiceTest.testSendEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="business.flyers.Services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Poslovniletci" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="business.flyers.Services" />
+      <option name="MAIN_CLASS_NAME" value="business.flyers.Services.EmailServiceTest" />
+      <option name="METHOD_NAME" value="testSendEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RegistrationControllerTest.testPostRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="business.flyers.Controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Poslovniletci" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="business.flyers.Controllers" />
+      <option name="MAIN_CLASS_NAME" value="business.flyers.Controllers.RegistrationControllerTest" />
+      <option name="METHOD_NAME" value="testPostRegistration" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -826,19 +855,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BusinessFlyersTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RegistrationControllerIntegrationTest and 13 more" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PrivatnoControllerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsServiceTest.testGetAllUsers" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsTest.testUserDetails" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EmailServiceTest.testSendEmail" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsServiceTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsServiceTest.testInvalidActivation" />
+      <item index="3" class="java.lang.String" itemvalue="Application.BusinessFlyersApplication" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.testPostRegistration" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsTest.testUserDetails" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BusinessFlyersTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RegistrationControllerIntegrationTest and 13 more" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsServiceTest.testGetAllUsers" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PrivatnoControllerTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BusinessFlyersApplication" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RegistrationControllerTest.testPostRegistration" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsServiceTest.testInvalidActivation" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultUserDetailsServiceTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmailServiceTest.testSendEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -859,39 +888,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BusinessFlyersTest - 2018.03.21 at 23h 43m 34s.xml">
-      <configuration name="BusinessFlyersTest" configurationId="JUnit" />
+    <history-entry file="DefaultUserDetailsServiceTest_testInvalidActivation - 2018.03.24 at 03h 40m 58s.xml">
+      <configuration name="DefaultUserDetailsServiceTest.testInvalidActivation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BusinessFlyersTest - 2018.03.21 at 23h 56m 53s.xml">
-      <configuration name="BusinessFlyersTest" configurationId="JUnit" />
+    <history-entry file="EmailServiceTest_testSendEmail - 2018.03.24 at 03h 31m 04s.xml">
+      <configuration name="EmailServiceTest.testSendEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DefaultUserDetailsServiceTest_testGetAllUsers - 2018.03.21 at 23h 53m 31s.xml">
-      <configuration name="DefaultUserDetailsServiceTest.testGetAllUsers" configurationId="JUnit" />
+    <history-entry file="EmailServiceTest_testSendEmail - 2018.03.24 at 03h 32m 59s.xml">
+      <configuration name="EmailServiceTest.testSendEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DefaultUserDetailsServiceTest_testGetAllUsers - 2018.03.21 at 23h 54m 51s.xml">
-      <configuration name="DefaultUserDetailsServiceTest.testGetAllUsers" configurationId="JUnit" />
+    <history-entry file="EmailServiceTest_testSendEmail - 2018.03.24 at 03h 34m 47s.xml">
+      <configuration name="EmailServiceTest.testSendEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DefaultUserDetailsTest_testUserDetails - 2018.03.21 at 23h 56m 32s.xml">
-      <configuration name="DefaultUserDetailsTest.testUserDetails" configurationId="JUnit" />
+    <history-entry file="EmailServiceTest_testSendEmail - 2018.03.24 at 03h 35m 04s.xml">
+      <configuration name="EmailServiceTest.testSendEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DefaultUserDetailsTest_testUserDetails - 2018.03.22 at 00h 00m 06s.xml">
-      <configuration name="DefaultUserDetailsTest.testUserDetails" configurationId="JUnit" />
+    <history-entry file="EmailServiceTest_testSendEmail - 2018.03.24 at 03h 35m 55s.xml">
+      <configuration name="EmailServiceTest.testSendEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrivatnoControllerTest - 2018.03.21 at 23h 48m 47s.xml">
-      <configuration name="PrivatnoControllerTest" configurationId="JUnit" />
+    <history-entry file="EmailServiceTest_testSendEmail - 2018.03.24 at 03h 36m 04s.xml">
+      <configuration name="EmailServiceTest.testSendEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegistrationControllerIntegrationTest_and_13_more - 2018.03.21 at 23h 44m 19s.xml">
-      <configuration name="RegistrationControllerIntegrationTest and 13 more" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_testPostRegistration - 2018.03.24 at 15h 40m 25s.xml">
+      <configuration name="RegistrationControllerTest.testPostRegistration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegistrationControllerIntegrationTest_and_13_more - 2018.03.21 at 23h 49m 23s.xml">
-      <configuration name="RegistrationControllerIntegrationTest and 13 more" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_testPostRegistration - 2018.03.24 at 15h 41m 03s.xml">
+      <configuration name="RegistrationControllerTest.testPostRegistration" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegistrationControllerIntegrationTest_and_13_more - 2018.03.21 at 23h 55m 21s.xml">
-      <configuration name="RegistrationControllerIntegrationTest and 13 more" configurationId="JUnit" />
+    <history-entry file="RegistrationControllerTest_testValidActivationKey - 2018.03.24 at 03h 28m 53s.xml">
+      <configuration name="RegistrationControllerTest.testValidActivationKey" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -903,7 +933,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -912,14 +941,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41182682" sideWeight="0.48125" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41182682" sideWeight="0.48125" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -927,201 +957,71 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="76" />
+      <option name="time" value="106" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>userModel.getUserGroup()</expression-string>
+        <expression-string>key</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>29/10</expression-string>
+        <expression-string>userModel.isValid()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>19/10</expression-string>
+        <expression-string>DAYS.between(signUpDate, LocalDateTime.now())</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>9/10</expression-string>
+        <expression-string>signUpDate</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>defaultUserDetailsService.loadUserByUsername(VALID_USERNAME).getUsername()</expression-string>
+        <expression-string>expirationDate</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>defaultUserDetailsService.loadUserByUsername(VALID_USERNAME)</expression-string>
+        <expression-string>expirationDate.before(new Date()) || expirationDate.equals(new Date())</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>errors</expression-string>
+        <expression-string>expirationDate.getTime()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>mockMvc.perform(post(&quot;/registration&quot;)                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)                 .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(                         new BasicNameValuePair(&quot;name&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;lastName&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;username&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;email&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;password&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;password2&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;g-recaptcha-response&quot;, &quot;a&quot;)                 ))))).andReturn().getResponse()</expression-string>
+        <expression-string>new Date()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>mockMvc.perform(post(&quot;/registration&quot;)                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)                 .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(                         new BasicNameValuePair(&quot;name&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;lastName&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;username&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;email&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;password&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;password2&quot;, &quot;a&quot;),                         new BasicNameValuePair(&quot;g-recaptcha-response&quot;, &quot;a&quot;)                 ))))).andReturn().getResponse().getForwardedUrl()</expression-string>
+        <expression-string>timedOutUser()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserGroupModelTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserGroupModel.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/view/InternalResourceViewResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/MvcWebApplicationInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.3.RELEASE/spring-security-core-5.0.3.RELEASE.jar!/org/springframework/security/core/authority/SimpleGrantedAuthority.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/BusinessFlyersApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/RegistrationFormTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Exceptions/RecaptchaServiceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Exception/RecaptchaServiceExceptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="103" lean-forward="false" selection-start-line="12" selection-start-column="103" selection-end-line="12" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/RecaptchaServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="85" lean-forward="false" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Exceptions/RecaptchaServiceExceptionTest.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/validation/Errors.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/RecaptchaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar!/org/springframework/util/CollectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Validators/RegistrationFormValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/RegistrationForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/Integration/RegistrationControllerIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
@@ -1141,7 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,45 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="96" lean-forward="false" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/LoginControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Repositories/UserModelRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1202,114 +1062,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="199" lean-forward="false" selection-start-line="23" selection-start-column="199" selection-end-line="23" selection-end-column="199" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/PaginationServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/UserDTOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/PaginationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="112" lean-forward="false" selection-start-line="17" selection-start-column="112" selection-end-line="17" selection-end-column="112" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#346#347#0" expanded="false" />
-            <element signature="e#437#438#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/UserDTOTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1436#1437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/PrivatnoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/privatno.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="459">
           <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" column="135" lean-forward="false" selection-start-line="31" selection-start-column="135" selection-end-line="31" selection-end-column="135" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,43 +1084,283 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="25" column="147" lean-forward="false" selection-start-line="25" selection-start-column="147" selection-end-line="25" selection-end-column="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.4.RELEASE/spring-context-support-5.0.4.RELEASE.jar!/org/springframework/mail/SimpleMailMessage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/LoginControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar!/org/mockito/Mockito.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="75" column="24" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Exceptions/InvalidActivationKeyException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Exceptions/RecaptchaServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Exception/RecaptchaServiceExceptionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="103" lean-forward="false" selection-start-line="12" selection-start-column="103" selection-end-line="12" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/RecaptchaServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="34" column="85" lean-forward="false" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/PaginationServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/RegistrationService.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/RegistrationServiceTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Entities/UserModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/UserDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Repositories/UserModelRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Validators/RegistrationFormValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="61" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/PrivatnoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/RegistrationForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/RecaptchaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.3.RELEASE/spring-security-core-5.0.3.RELEASE.jar!/org/springframework/security/authentication/AuthenticationManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.3.RELEASE/spring-security-config-5.0.3.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="313" column="9" lean-forward="true" selection-start-line="313" selection-start-column="9" selection-end-line="313" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/PaginationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="113" lean-forward="false" selection-start-line="17" selection-start-column="113" selection-end-line="17" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.3.RELEASE/spring-security-web-5.0.3.RELEASE.jar!/org/springframework/security/web/authentication/WebAuthenticationDetails.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Populators/UserModelPopulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Populators/UserModelPopulatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Entities/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="103" column="43" lean-forward="false" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="86" column="21" lean-forward="false" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/EmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/EmailServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/registration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Services/DefaultUserDetailsServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="47" column="179" lean-forward="true" selection-start-line="47" selection-start-column="179" selection-end-line="47" selection-end-column="179" />
+        <state relative-caret-position="17">
+          <caret line="46" column="88" lean-forward="false" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Constants/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/Controllers/RegistrationControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="431">
+          <caret line="98" column="87" lean-forward="true" selection-start-line="98" selection-start-column="87" selection-end-line="98" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/dto/DefaultUserDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        <state relative-caret-position="234">
+          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="119" column="40" lean-forward="false" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Controllers/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/business/flyers/dto/DefaultUserDetailsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/flyers/Services/DefaultUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="173" lean-forward="false" selection-start-line="32" selection-start-column="173" selection-end-line="32" selection-end-column="173" />
+        <state relative-caret-position="285">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>

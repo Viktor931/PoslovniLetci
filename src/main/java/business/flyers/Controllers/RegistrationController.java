@@ -1,14 +1,22 @@
 package business.flyers.Controllers;
 
 import business.flyers.Constants.Constants;
-import business.flyers.Exceptions.RecaptchaServiceException;
+import business.flyers.Entities.UserModel;
+import business.flyers.Repositories.UserModelRepository;
 import business.flyers.Services.DefaultUserDetailsService;
 import business.flyers.Services.RecaptchaService;
 import business.flyers.Validators.RegistrationFormValidator;
 import business.flyers.dto.RegistrationForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
+import org.springframework.security.web.context.support.SecurityWebApplicationContextUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
@@ -67,8 +75,11 @@ public class RegistrationController {
     }
 
     @PostMapping
-    public ModelAndView verifyRegistration(WebRequest request, Model model, @ModelAttribute("form") @Valid RegistrationForm registrationForm, @RequestParam(name="g-recaptcha-response") String recaptchaResponse){
+    public ModelAndView verifyRegistration(WebRequest request, Model model,
+                                           @ModelAttribute("form") @Valid RegistrationForm registrationForm,
+                                           @RequestParam(name="g-recaptcha-response") String recaptchaResponse){
         if(recaptchaService.isResponseValid(httpServletRequest.getRemoteAddr(), recaptchaResponse)){
+            userDetailsService.createUserFromRegistrationForm(registrationForm);
             return new ModelAndView("home");
         } else {
             registrationForm.setPassword("");
@@ -77,5 +88,12 @@ public class RegistrationController {
             populateErrorMessages(result);
             return result;
         }
+    }
+
+    @GetMapping(value = "/activation")
+    public ModelAndView activate(HttpServletRequest request,
+                         @RequestParam(defaultValue = "") String key) {
+        UserModel user = userDetailsService.loadUserByActivationKey(request, key);
+        return new ModelAndView("home");
     }
 }

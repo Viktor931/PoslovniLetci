@@ -9,6 +9,9 @@ public class Constants {
             public static final String LAST_NAME_CAPITAL_LETTER = "Last name must start with capital letter";
             public static final String PASSWORD_ERRORS = "Password must contain 1 digit, 2 capital and 2 lower case letters, and must be between 5 and 15 characters";
         }
+        public class Activation {
+            public static final int TIMEOUT_IN_HOURS = 5;
+        }
     }
     public static class Pagination {
         public static int ENTRIES_PER_PAGE = 10;

@@ -49,7 +49,7 @@ public class DefaultUserDetails implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return userModel.isValid();
     }
 
     public UserModel getUserModel(){

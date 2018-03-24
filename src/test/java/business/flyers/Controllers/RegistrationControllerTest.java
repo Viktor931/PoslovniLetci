@@ -1,30 +1,37 @@
 package business.flyers.Controllers;
 
+import business.flyers.Entities.UserModel;
+import business.flyers.Repositories.UserModelRepository;
 import business.flyers.Services.DefaultUserDetailsService;
 import business.flyers.Services.RecaptchaService;
 import business.flyers.Validators.RegistrationFormValidator;
 import business.flyers.dto.RegistrationForm;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.ui.Model;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.when;
+import java.time.LocalDateTime;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class RegistrationControllerTest {
@@ -38,8 +45,16 @@ public class RegistrationControllerTest {
     private RecaptchaService recaptchaService;
     @Mock
     private HttpServletRequest httpServletRequest;
+    @Mock
+    private AuthenticationManager authenticationManager;
+
     @Value("${recaptcha.site-key}")
     private static final String recaptchaKey = "";
+
+    @Rule
+    public final ExpectedException exception = ExpectedException.none();
+
+    private UserModel userForValidationTest = mock(UserModel.class);
 
     @Before
     public void init(){
@@ -47,6 +62,7 @@ public class RegistrationControllerTest {
         when(userDetailsService.loadUserByUsername("ValidUsername")).thenReturn(Mockito.mock(UserDetails.class));
         when(recaptchaService.isResponseValid(httpServletRequest.getRemoteAddr(), "ValidResponse")).thenReturn(true);
         when(recaptchaService.isResponseValid(httpServletRequest.getRemoteAddr(), "InvalidResponse")).thenReturn(false);
+        when(userDetailsService.loadUserByActivationKey(httpServletRequest, "invalidKey")).thenThrow(UsernameNotFoundException.class);
     }
 
     @Test
@@ -71,6 +87,7 @@ public class RegistrationControllerTest {
     @Test
     public void testPostRegistration(){
         Assert.assertTrue(registrationController.verifyRegistration(Mockito.mock(WebRequest.class), Mockito.mock(Model.class), new RegistrationForm(), "ValidResponse").getViewName().equals("home"));
+        verify(userDetailsService, times(1)).createUserFromRegistrationForm(any());
 
         ModelAndView invalidModelAndView = registrationController.verifyRegistration(Mockito.mock(WebRequest.class), Mockito.mock(Model.class), new RegistrationForm(), "InvalidResponse");
         Assert.assertTrue(invalidModelAndView.getViewName().equals("registration"));
@@ -90,6 +107,18 @@ public class RegistrationControllerTest {
     public void testInitDatabinder(){
         WebDataBinder webDataBinder = Mockito.mock(WebDataBinder.class);
         registrationController.initBinder(webDataBinder);
-        Mockito.verify(webDataBinder, times(1)).addValidators(registrationFormValidator);
+        verify(webDataBinder, times(1)).addValidators(registrationFormValidator);
+    }
+
+    @Test
+    public void testInvalidActivationKey(){
+        exception.expect(UsernameNotFoundException.class);
+        registrationController.activate(httpServletRequest, "invalidKey");
+
+    }
+
+    @Test
+    public void testValidActivationKey(){
+        Assert.assertEquals(registrationController.activate(httpServletRequest, "validKey").getViewName(), "home");
     }
 }

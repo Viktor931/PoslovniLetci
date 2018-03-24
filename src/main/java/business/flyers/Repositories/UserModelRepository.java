@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface UserModelRepository extends JpaRepository<UserModel, Long>{
     UserModel findOneByUsername(String username);
+    UserModel findOneByActivationKey(String activationKey);
 }

@@ -28,7 +28,7 @@ $(document).ready(function() {
                 }
             });
     });
-    $("#password, #password2").change(function(){
+    $("#password, #password2").keyup(function(){
         if($("#password").val() == $("#password2").val()){
             $("#password")[0].setCustomValidity("");
             $("#password2")[0].setCustomValidity("");
@@ -59,13 +59,6 @@ $(document).ready(function() {
             ele.setCustomValidity("");
         } else {
             ele.setCustomValidity(passwordErrors);
-        }
-    });
-    $('form').submit(function () {
-        var data = $.trim($('#name').val()) + $.trim($('#lastName').val()) + $.trim($('#username').val()) + $.trim($('#email').val()) + $.trim($('#password').val()) + $.trim($('#password2').val());
-        console.log(":::" + data);
-        if(data){
-            return false;
         }
     });
 });
