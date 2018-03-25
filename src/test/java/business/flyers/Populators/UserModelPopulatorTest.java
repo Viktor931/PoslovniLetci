@@ -25,6 +25,7 @@ public class UserModelPopulatorTest {
         registrationForm.setEmail("valid");
         registrationForm.setUsername("valid");
         registrationForm.setPassword("valid");
+        registrationForm.setTwoStepLogin(true);
         UserModel userModel = new UserModel();
         userModelPopulator.populateFromRegistrationForm(registrationForm, userModel, passwordEncoder);
         Assert.assertEquals(userModel.getFirstName(), "valid");
@@ -33,5 +34,6 @@ public class UserModelPopulatorTest {
         Assert.assertEquals(userModel.getEmail(), "valid");
         Assert.assertEquals(userModel.getPassword(), passwordEncoder.encode("valid"));
         Assert.assertEquals(userModel.getRawPassword(), "valid");
+        Assert.assertEquals(userModel.getTwoStepLogin(), true);
     }
 }

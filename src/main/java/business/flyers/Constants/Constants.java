@@ -16,6 +16,9 @@ public class Constants {
     public static class Pagination {
         public static int ENTRIES_PER_PAGE = 10;
     }
+    public static class Login {
+        public static final int TIMEOUT_IN_MINUTES = 5;
+    }
     public static class User {
         public static class Role {
             public static final String USER = "USER";

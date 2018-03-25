@@ -12,6 +12,7 @@ public class RegistrationForm {
     private String email;
     private String password;
     private String password2;
+    private boolean twoStepLogin;
 
     public String getName() {
         return name;
@@ -59,5 +60,13 @@ public class RegistrationForm {
 
     public void setPassword2(String password2) {
         this.password2 = password2;
+    }
+
+    public void setTwoStepLogin(boolean twoStepLogin) {
+        this.twoStepLogin = twoStepLogin;
+    }
+
+    public boolean getTwoStepLogin() {
+        return twoStepLogin;
     }
 }

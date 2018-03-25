@@ -1,7 +1,5 @@
 package business.flyers.Entities;
 
-import business.flyers.Constants.Constants;
-import business.flyers.dto.RegistrationForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.util.StringUtils;
@@ -24,9 +22,12 @@ public class UserModel {
     private String userGroup;
     private String activationKey;
     private LocalDateTime signUpDate;
+    private boolean twoStepLogin;
 
     @Autowired
     private static PasswordEncoder passwordEncoder;
+    private String loginKey;
+    private LocalDateTime loginTime;
 
     public Long getId() {
         return id;
@@ -88,20 +89,8 @@ public class UserModel {
         this.activationKey = activationKey;
     }
 
-    public boolean isValid(){
+    public boolean isActivated(){
         return StringUtils.isEmpty(activationKey);
-    }
-
-    public boolean validateActivationKey(String activationKey){
-        if(!StringUtils.isEmpty(this.activationKey) && this.activationKey.equals(activationKey) && isActivationKeyActive()){
-            this.activationKey = "";
-            return true;
-        }
-        return false;
-    }
-
-    private boolean isActivationKeyActive() {
-        return LocalDateTime.now().isBefore(signUpDate.plusHours(Constants.Registration.Activation.TIMEOUT_IN_HOURS));
     }
 
     public void setSignUpDate(LocalDateTime signUpDate) {
@@ -114,5 +103,33 @@ public class UserModel {
 
     public void setRawPassword(String rawPassword) {
         this.rawPassword = rawPassword;
+    }
+
+    public void setTwoStepLogin(boolean twoStepLogin) {
+        this.twoStepLogin = twoStepLogin;
+    }
+
+    public boolean getTwoStepLogin() {
+        return twoStepLogin;
+    }
+
+    public void setLoginKey(String loginKey) {
+        this.loginKey = loginKey;
+    }
+
+    public String getLoginKey() {
+        return loginKey;
+    }
+
+    public LocalDateTime getSignUpDate() {
+        return signUpDate;
+    }
+
+    public LocalDateTime getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(LocalDateTime loginTime) {
+        this.loginTime = loginTime;
     }
 }

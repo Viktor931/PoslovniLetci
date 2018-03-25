@@ -3,17 +3,24 @@ package business.flyers;
 import business.flyers.Constants.Constants;
 import business.flyers.Entities.UserModel;
 import business.flyers.Repositories.UserModelRepository;
+import business.flyers.Services.DefaultUserDetailsService;
 import business.flyers.dto.DefaultUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.InsufficientAuthenticationException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import javax.annotation.PostConstruct;
@@ -22,6 +29,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @EnableWebSecurity
 public class SecurityConfig {
@@ -56,11 +64,36 @@ public class SecurityConfig {
         }
 
         class CookieAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+            private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
             @Override
             public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
                 Cookie cookie = new Cookie("user", ((DefaultUserDetails) authentication.getPrincipal()).getUserModel().getFirstName());
                 httpServletResponse.addCookie(cookie);
+                redirectStrategy.sendRedirect(httpServletRequest, httpServletResponse, "/home");
+            }
+        }
+
+        class CustomAuthentificationProvider implements AuthenticationProvider {
+            @Autowired
+            private DefaultUserDetailsService userDetailsService;
+
+            @Override
+            public Authentication authenticate(Authentication authentication)
+                    throws AuthenticationException {
+                String name = authentication.getName();
+                String password = authentication.getCredentials().toString();
+                UserModel userModel = ((DefaultUserDetails) authentication.getPrincipal()).getUserModel();
+                if(userModel.getTwoStepLogin()){
+                    userDetailsService.createLoginKey(userModel);
+                    throw new InsufficientAuthenticationException("");
+                }
+                return new UsernamePasswordAuthenticationToken(name, password, new ArrayList<>());
+            }
+
+            @Override
+            public boolean supports(Class<?> authentication) {
+                return authentication.equals(UsernamePasswordAuthenticationToken.class);
             }
         }
     }
@@ -94,15 +127,16 @@ public class SecurityConfig {
         user.setPassword(passwordEncoder.encode("user"));
         user.setUserGroup(Constants.User.Role.USER);
         UserModel dbadmin = new UserModel();
-        user.setFirstName("dbadmin");
-        user.setLastName("dbadmin");
-        user.setUsername("dbadmin");
-        user.setEmail("dbadmin");
-        user.setPassword(passwordEncoder.encode("dbadmin"));
-        user.setUserGroup(Constants.User.Role.DATABASEADMIN);
+        dbadmin.setFirstName("dbadmin");
+        dbadmin.setLastName("dbadmin");
+        dbadmin.setUsername("dbadmin");
+        dbadmin.setEmail("dbadmin");
+        dbadmin.setPassword(passwordEncoder.encode("dbadmin"));
+        dbadmin.setUserGroup(Constants.User.Role.DATABASEADMIN);
         userModelRepository.save(admin);
         userModelRepository.save(moderator);
         userModelRepository.save(user);
+        userModelRepository.save(dbadmin);
     }
 }
 

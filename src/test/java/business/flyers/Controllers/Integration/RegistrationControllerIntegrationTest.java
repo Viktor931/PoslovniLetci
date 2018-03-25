@@ -58,7 +58,6 @@ public class RegistrationControllerIntegrationTest {
     }
     @Test
     public void testRecaptchaInvalidFormSubmission() throws Exception {
-        ReflectionTestUtils.setField(recaptchaService, "recaptchaSecretKey", "${recaptcha.secret-key}");
         mockMvc.perform(post("/registration")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(
@@ -68,6 +67,7 @@ public class RegistrationControllerIntegrationTest {
                         new BasicNameValuePair("email", "a@a.a"),
                         new BasicNameValuePair("password", "aaAA1"),
                         new BasicNameValuePair("password2", "aaAA1"),
+                        new BasicNameValuePair("twoStepLogin", "true"),
                         new BasicNameValuePair("g-recaptcha-response", "a")
                 ))))).andReturn().getResponse().getForwardedUrl().equals("/WEB-INF/view/registration.jsp");
         this.mockMvc.perform(post("/registration")
@@ -79,13 +79,13 @@ public class RegistrationControllerIntegrationTest {
                         new BasicNameValuePair("email", "a@a.a"),
                         new BasicNameValuePair("password", "aaAA1"),
                         new BasicNameValuePair("password2", "aaAA1"),
+                        new BasicNameValuePair("twoStepLogin", "true"),
                         new BasicNameValuePair("g-recaptcha-response", "a")
                 ))))).andExpect(model().attribute("registrationForm", notNullValue()));
     }
 
     @Test
     public void testRecaptchaValidFormSubmission() throws Exception {
-        ReflectionTestUtils.setField(recaptchaService, "recaptchaSecretKey", "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe");
         mockMvc.perform(post("/registration")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .content(EntityUtils.toString(new UrlEncodedFormEntity(Arrays.asList(
@@ -95,6 +95,7 @@ public class RegistrationControllerIntegrationTest {
                         new BasicNameValuePair("email", "a@a.a"),
                         new BasicNameValuePair("password", "aaAA1"),
                         new BasicNameValuePair("password2", "aaAA1"),
+                        new BasicNameValuePair("twoStepLogin", "true"),
                         new BasicNameValuePair("g-recaptcha-response", "a")
                 ))))).andReturn().getResponse().getForwardedUrl().equals("/WEB-INF/view/home.jsp");
     }

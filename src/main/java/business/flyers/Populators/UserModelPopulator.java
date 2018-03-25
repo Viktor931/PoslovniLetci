@@ -16,5 +16,6 @@ public class UserModelPopulator {
         userModel.setEmail(registrationForm.getEmail());
         userModel.setPassword(passwordEncoder.encode(registrationForm.getPassword()));
         userModel.setRawPassword(registrationForm.getPassword());
+        userModel.setTwoStepLogin(registrationForm.getTwoStepLogin());
     }
 }

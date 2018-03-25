@@ -16,7 +16,7 @@ public class PrivatnoController {
     @Autowired
     private PaginationService paginationService;
 
-    @RequestMapping
+    @RequestMapping("/privatno")
     public ModelAndView privatno(@RequestParam(value = "page", defaultValue = "1") String page) {
         ModelAndView result = new ModelAndView("privatno");
         result.addObject("users", defaultUserDetailsService.getUsers(paginationService.from(page), paginationService.to(page)));

@@ -17,6 +17,8 @@ public class RegistrationFormTest {
         registrationForm.setEmail("a");
         registrationForm.setPassword2("a");
         registrationForm.setPassword("a");
-        String test = "" + registrationForm.getName() + registrationForm.getLastName() + registrationForm.getUsername() + registrationForm.getEmail() + registrationForm.getPassword() + registrationForm.getPassword2();
+        registrationForm.setTwoStepLogin(false);
+        String test = "" + registrationForm.getName() + registrationForm.getLastName() + registrationForm.getUsername() +
+                registrationForm.getEmail() + registrationForm.getPassword() + registrationForm.getPassword2() + registrationForm.getTwoStepLogin();
     }
 }

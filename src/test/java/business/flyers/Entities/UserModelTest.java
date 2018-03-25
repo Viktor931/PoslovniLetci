@@ -1,6 +1,5 @@
 package business.flyers.Entities;
 
-import business.flyers.Constants.Constants;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,17 +28,15 @@ public class UserModelTest {
         userModel.setUserGroup("a");
         userModel.setId(1L);
         userModel.setRawPassword("a");
+        userModel.setTwoStepLogin(true);
+        userModel.setLoginKey("a");
+        userModel.setSignUpDate(LocalDateTime.now());
+        userModel.setLoginTime(LocalDateTime.now());
         String test = "" + userModel.getEmail() + userModel.getFirstName() + userModel.getLastName() + userModel.getPassword() +
-                userModel.getUsername() + userModel.getUserGroup() + userModel.getId() + userModel.getRawPassword();
+                userModel.getUsername() + userModel.getUserGroup() + userModel.getId() + userModel.getRawPassword() +
+                userModel.getTwoStepLogin() + userModel.getLoginKey() + userModel.getSignUpDate() + userModel.getLoginTime();
 
         userModel.setActivationKey("key");
-        Assert.assertFalse(userModel.isValid()); //activation key isnt null
-        LocalDateTime oldTime = LocalDateTime.now().minusHours(Constants.Registration.Activation.TIMEOUT_IN_HOURS);
-        userModel.setSignUpDate(oldTime);
-        Assert.assertFalse(userModel.isValid()); //signupdate too old
-        userModel.setSignUpDate(LocalDateTime.now());
-        Assert.assertFalse(userModel.validateActivationKey("wrongKey"));
-        Assert.assertTrue(userModel.validateActivationKey("key"));
-        Assert.assertTrue(userModel.isValid());
+        Assert.assertFalse(userModel.isActivated()); //activation key isnt null
     }
 }

@@ -13,12 +13,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.servlet.Registration;
 import javax.servlet.http.HttpServletRequest;
 
 import java.time.LocalDateTime;
@@ -26,7 +23,7 @@ import java.time.LocalDateTime;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(MockitoJUnitRunner.class)
 public class DefaultUserDetailsServiceTest {
     private static String VALID_USERNAME = "validUsername";
     private static UserModel VALID_USER = Mockito.mock(UserModel.class);
@@ -44,7 +41,11 @@ public class DefaultUserDetailsServiceTest {
         when(userModelRepository.findOneByUsername(VALID_USERNAME)).thenReturn(VALID_USER);
         when(VALID_USER.getUsername()).thenReturn(VALID_USERNAME);
         when(userModelRepository.findOneByActivationKey("validKey")).thenReturn(VALID_USER);
+        when(VALID_USER.getSignUpDate()).thenReturn(LocalDateTime.now());
         when(userModelRepository.findOneByActivationKey("invalidKey")).thenReturn(null);
+        when(userModelRepository.findOneByLoginKey("validKey")).thenReturn(VALID_USER);
+        when(VALID_USER.getLoginTime()).thenReturn(LocalDateTime.now());
+        when(userModelRepository.findOneByLoginKey("invalidKey")).thenReturn(null);
     }
 
     @Test(expected = UsernameNotFoundException.class)
@@ -86,13 +87,33 @@ public class DefaultUserDetailsServiceTest {
     }
 
     @Test
-    public void testActivation(){
+    public void testValidActivation(){
         defaultUserDetailsService.loadUserByActivationKey(mock(HttpServletRequest.class), "validKey");
+        Assert.assertNotNull(SecurityContextHolder.getContext().getAuthentication());
         Assert.assertNotNull(SecurityContextHolder.getContext().getAuthentication());
     }
 
     @Test(expected = UsernameNotFoundException.class)
     public void testInvalidActivation(){
         defaultUserDetailsService.loadUserByActivationKey(mock(HttpServletRequest.class), "invalidKey");
+    }
+
+    @Test
+    public void loadUserByLoginKey() {
+        defaultUserDetailsService.loadUserByLoginKey(mock(HttpServletRequest.class), "validKey");
+        Assert.assertNotNull(SecurityContextHolder.getContext().getAuthentication());
+    }
+
+    @Test(expected = UsernameNotFoundException.class)
+    public void loadUserByInvalidLoginKey(){
+        defaultUserDetailsService.loadUserByLoginKey(mock(HttpServletRequest.class), "invalidKey");
+    }
+
+    @Test
+    public void createLoginKey(){
+        UserModel userModel = mock(UserModel.class);
+        defaultUserDetailsService.createLoginKey(userModel);
+        verify(userModelRepository, times(1)).save(userModel);
+        verify(emailService, times(1)).sendEmail(any(), any(), any());
     }
 }

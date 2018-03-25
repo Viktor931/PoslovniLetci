@@ -96,6 +96,10 @@ $(document).ready(function() {
                 <td><form:input path="password2" value="${model.registrationForm.password2}" type="password" required="required"/></td>
             </tr>
             <tr>
+                <td><form:label path="twoStepLogin">Two step login</form:label></td>
+                <td><form:checkbox path="twoStepLogin" value="${model.registrationForm.twoStepLogin}"/></td>
+            </tr>
+            <tr>
                 <div class="g-recaptcha"
                           data-sitekey="${recaptchaSiteKey}"></div>
             </tr>
