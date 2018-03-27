@@ -6,6 +6,7 @@ import business.flyers.Repositories.UserModelRepository;
 import business.flyers.Services.DefaultUserDetailsService;
 import business.flyers.dto.DefaultUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -48,6 +49,7 @@ public class SecurityConfig {
 
     @Configuration
     public static class RegularWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
@@ -61,6 +63,7 @@ public class SecurityConfig {
                     .permitAll();
 
             http.csrf().disable();
+            http.requiresChannel().anyRequest().requiresSecure();
         }
 
         class CookieAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
