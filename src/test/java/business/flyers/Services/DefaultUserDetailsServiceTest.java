@@ -1,10 +1,9 @@
 package business.flyers.Services;
 
-import business.flyers.Constants.Constants;
-import business.flyers.Entities.UserModel;
-import business.flyers.Populators.UserModelPopulator;
-import business.flyers.Repositories.UserModelRepository;
-import business.flyers.dto.RegistrationForm;
+import java.time.LocalDateTime;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,16 +11,21 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import javax.servlet.http.HttpServletRequest;
+import business.flyers.Constants.Constants;
+import business.flyers.Entities.UserModel;
+import business.flyers.Populators.UserModelPopulator;
+import business.flyers.Repositories.UserModelRepository;
+import business.flyers.dto.RegistrationForm;
 
-import java.time.LocalDateTime;
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DefaultUserDetailsServiceTest {

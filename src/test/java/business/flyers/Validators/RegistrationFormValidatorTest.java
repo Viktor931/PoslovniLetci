@@ -1,7 +1,5 @@
 package business.flyers.Validators;
 
-import business.flyers.Constants.Constants;
-import business.flyers.dto.RegistrationForm;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,13 +7,16 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ObjectError;
+
+import business.flyers.Constants.Constants;
+import business.flyers.dto.RegistrationForm;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

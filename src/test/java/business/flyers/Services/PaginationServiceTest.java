@@ -1,11 +1,12 @@
 package business.flyers.Services;
 
-import business.flyers.Constants.Constants;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import business.flyers.Constants.Constants;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PaginationServiceTest {

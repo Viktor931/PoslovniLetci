@@ -2,11 +2,11 @@ package business.flyers.dto;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@DataJpaTest
+@RunWith(MockitoJUnitRunner.class)
 public class RegistrationFormTest {
     @Test
     public void testUserDetails(){

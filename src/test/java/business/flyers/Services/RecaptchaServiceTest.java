@@ -1,50 +1,39 @@
 package business.flyers.Services;
 
-import business.flyers.Exceptions.RecaptchaServiceException;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentMatchers;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.util.ReflectionTestUtils;
+import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.spy;
+import business.flyers.Exceptions.RecaptchaServiceException;
+
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@AutoConfigureMockMvc
+@RunWith(MockitoJUnitRunner.class)
 public class RecaptchaServiceTest {
-    @Autowired
+    @InjectMocks
     private RecaptchaService recaptchaService;
-    @Autowired
+    @Mock
     private RestTemplate restTemplate;
 
-    @Test
-    public void testInvalidResponse(){
-        ReflectionTestUtils.setField(recaptchaService, "restTemplate", restTemplate);
-        Assert.assertEquals(recaptchaService.isResponseValid("192.192.192.192", "aaa"), false);
-    }
-    @Test
-    public void testValidResponse(){
-        ReflectionTestUtils.setField(recaptchaService, "restTemplate", restTemplate);
-        ReflectionTestUtils.setField(recaptchaService, "recaptchaSecretKey", "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe");
-        Assert.assertEquals(recaptchaService.isResponseValid("192.192.192.192", "aaa"), true);
-    }
     @Test(expected = RecaptchaServiceException.class)
-    public void testUnavailableRecaptchaAPI(){
-        ReflectionTestUtils.setField(recaptchaService, "restTemplate", null);
-        recaptchaService.isResponseValid("192.192.192.192", "aa");
-        ReflectionTestUtils.setField(recaptchaService, "restTemplate", restTemplate);
+    public void testRestTemplateCall(){
+        recaptchaService.isResponseValid("", "");
+        verify(restTemplate).postForEntity(any(), any(), any());
+    }
+
+    @Test
+    public void testValidRecaptcha() {
+    	ResponseEntity responseEntity = mock(ResponseEntity.class);
+        when(restTemplate.postForEntity(any(String.class), any(MultiValueMap.class), any(Class.class))).thenReturn(responseEntity);
+        when(responseEntity.getBody()).thenReturn(mock(RecaptchaService.RecaptchaResponse.class));
+        recaptchaService.isResponseValid("", "");
     }
 }

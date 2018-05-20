@@ -1,14 +1,15 @@
 package business.flyers.Populators;
 
-import business.flyers.Entities.UserModel;
-import business.flyers.dto.RegistrationForm;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import business.flyers.Entities.UserModel;
+import business.flyers.dto.RegistrationForm;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserModelPopulatorTest {

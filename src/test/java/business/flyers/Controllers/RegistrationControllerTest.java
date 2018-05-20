@@ -1,11 +1,7 @@
 package business.flyers.Controllers;
 
-import business.flyers.Entities.UserModel;
-import business.flyers.Repositories.UserModelRepository;
-import business.flyers.Services.DefaultUserDetailsService;
-import business.flyers.Services.RecaptchaService;
-import business.flyers.Validators.RegistrationFormValidator;
-import business.flyers.dto.RegistrationForm;
+import javax.servlet.http.HttpServletRequest;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
@@ -15,8 +11,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.Spy;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,12 +21,17 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
+import business.flyers.Entities.UserModel;
+import business.flyers.Services.DefaultUserDetailsService;
+import business.flyers.Services.RecaptchaService;
+import business.flyers.Validators.RegistrationFormValidator;
+import business.flyers.dto.RegistrationForm;
 
-import java.time.LocalDateTime;
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class RegistrationControllerTest {

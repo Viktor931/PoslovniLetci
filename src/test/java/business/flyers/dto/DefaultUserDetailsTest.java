@@ -1,27 +1,19 @@
 package business.flyers.dto;
 
-import business.flyers.Entities.UserModel;
+import java.util.List;
+
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
+import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+import business.flyers.Entities.UserModel;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-@RunWith(SpringRunner.class)
-@DataJpaTest
+@RunWith(MockitoJUnitRunner.class)
 public class DefaultUserDetailsTest {
     @Test
     public void testInterfaceImplementation(){

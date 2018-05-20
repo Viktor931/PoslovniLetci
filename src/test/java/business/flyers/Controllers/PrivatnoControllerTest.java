@@ -1,13 +1,14 @@
 package business.flyers.Controllers;
 
-import business.flyers.Services.DefaultUserDetailsService;
-import business.flyers.Services.PaginationService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import business.flyers.Services.DefaultUserDetailsService;
+import business.flyers.Services.PaginationService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PrivatnoControllerTest {
