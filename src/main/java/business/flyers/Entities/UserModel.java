@@ -7,6 +7,8 @@ import org.springframework.util.StringUtils;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+import static business.flyers.Constants.Constants.Login.MAX_FAILED_ATTEMPTS;
+
 @Entity
 public class UserModel {
     @Id
@@ -23,17 +25,30 @@ public class UserModel {
     private String activationKey;
     private LocalDateTime signUpDate;
     private boolean twoStepLogin;
+    private int failedAttempts;
 
     @Autowired
     private static PasswordEncoder passwordEncoder;
     private String loginKey;
     private LocalDateTime loginTime;
 
-    public Long getId() {
+	public void failedLogin() {
+	    failedAttempts++;
+	}
+
+	public void successfulLogin() {
+		failedAttempts = 0;
+	}
+
+	public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+	public boolean isLocked() {
+		return failedAttempts >= MAX_FAILED_ATTEMPTS;
+	}
+
+	public void setId(Long id) {
         this.id = id;
     }
 

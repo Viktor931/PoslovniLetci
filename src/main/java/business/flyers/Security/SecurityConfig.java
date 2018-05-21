@@ -1,36 +1,32 @@
-package business.flyers;
+package business.flyers.Security;
 
-import business.flyers.Constants.Constants;
-import business.flyers.Entities.UserModel;
-import business.flyers.Repositories.UserModelRepository;
-import business.flyers.Services.DefaultUserDetailsService;
-import business.flyers.dto.DefaultUserDetails;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.InsufficientAuthenticationException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.DefaultRedirectStrategy;
-import org.springframework.security.web.RedirectStrategy;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import java.io.IOException;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.DefaultRedirectStrategy;
+import org.springframework.security.web.RedirectStrategy;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
+import business.flyers.Constants.Constants;
+import business.flyers.Entities.UserModel;
+import business.flyers.Repositories.UserModelRepository;
+import business.flyers.Security.CustomAuthenticationProvider;
 
 @EnableWebSecurity
 public class SecurityConfig {
@@ -49,7 +45,14 @@ public class SecurityConfig {
 
     @Configuration
     public static class RegularWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+		@Autowired
+		private CustomAuthenticationProvider customAuthenticationProvider;
 
+		@Override
+		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+			auth.authenticationProvider(customAuthenticationProvider);
+		}
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
@@ -71,39 +74,11 @@ public class SecurityConfig {
 
             @Override
             public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-                Cookie cookie = new Cookie("user", ((DefaultUserDetails) authentication.getPrincipal()).getUserModel().getFirstName());
+                Cookie cookie = new Cookie("user", authentication.getPrincipal().toString());
                 httpServletResponse.addCookie(cookie);
                 redirectStrategy.sendRedirect(httpServletRequest, httpServletResponse, "/home");
             }
         }
-
-        class CustomAuthentificationProvider implements AuthenticationProvider {
-            @Autowired
-            private DefaultUserDetailsService userDetailsService;
-
-            @Override
-            public Authentication authenticate(Authentication authentication)
-                    throws AuthenticationException {
-                String name = authentication.getName();
-                String password = authentication.getCredentials().toString();
-                UserModel userModel = ((DefaultUserDetails) authentication.getPrincipal()).getUserModel();
-                if(userModel.getTwoStepLogin()){
-                    userDetailsService.createLoginKey(userModel);
-                    throw new InsufficientAuthenticationException("");
-                }
-                return new UsernamePasswordAuthenticationToken(name, password, new ArrayList<>());
-            }
-
-            @Override
-            public boolean supports(Class<?> authentication) {
-                return authentication.equals(UsernamePasswordAuthenticationToken.class);
-            }
-        }
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
     }
 
     @PostConstruct

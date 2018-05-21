@@ -120,4 +120,10 @@ public class DefaultUserDetailsServiceTest {
         verify(userModelRepository, times(1)).save(userModel);
         verify(emailService, times(1)).sendEmail(any(), any(), any());
     }
+
+    @Test
+    public void saveUser() {
+        defaultUserDetailsService.saveUser(new UserModel());
+        verify(userModelRepository).save(any());
+    }
 }

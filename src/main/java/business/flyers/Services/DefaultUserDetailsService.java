@@ -84,7 +84,8 @@ public class DefaultUserDetailsService implements UserDetailsService {
 
     private void authenticateUserAndSetSession(HttpServletRequest request, UserModel user) {
         UserDetails userDetails = new DefaultUserDetails(user);
-        Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+        Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails.getUsername(), userDetails.getPassword(),
+                                                                                userDetails.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
@@ -110,5 +111,9 @@ public class DefaultUserDetailsService implements UserDetailsService {
         userModel.setLoginTime(LocalDateTime.now());
         userModelRepository.save(userModel);
         emailService.sendEmail(userModel.getEmail(), "Login key", "To login navigate to the following link " + baseURL + "login/confirm?key=" + uuid);
+    }
+
+    public void saveUser(final UserModel userModel) {
+        userModelRepository.save(userModel);
     }
 }

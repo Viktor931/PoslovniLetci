@@ -18,6 +18,7 @@ public class Constants {
     }
     public static class Login {
         public static final int TIMEOUT_IN_MINUTES = 5;
+        public static final int MAX_FAILED_ATTEMPTS = 3;
     }
     public static class User {
         public static class Role {

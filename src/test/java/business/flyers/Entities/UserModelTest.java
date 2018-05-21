@@ -32,6 +32,7 @@ public class UserModelTest {
         userModel.setLoginKey("a");
         userModel.setSignUpDate(LocalDateTime.now());
         userModel.setLoginTime(LocalDateTime.now());
+        userModel.failedLogin();
         String test = "" + userModel.getEmail() + userModel.getFirstName() + userModel.getLastName() + userModel.getPassword() +
                 userModel.getUsername() + userModel.getUserGroup() + userModel.getId() + userModel.getRawPassword() +
                 userModel.getTwoStepLogin() + userModel.getLoginKey() + userModel.getSignUpDate() + userModel.getLoginTime();
