@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -23,6 +24,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
+import org.apache.commons.lang3.RandomStringUtils;
 
 @Service
 public class DefaultUserDetailsService implements UserDetailsService {
@@ -32,6 +34,8 @@ public class DefaultUserDetailsService implements UserDetailsService {
     private EmailService emailService;
     @Autowired
     private UserModelPopulator userModelPopulator;
+    @Autowired
+	private PasswordEncoder passwordEncoder;
 
     @Value("${siteURL}")
     private String baseURL;
@@ -115,5 +119,13 @@ public class DefaultUserDetailsService implements UserDetailsService {
 
     public void saveUser(final UserModel userModel) {
         userModelRepository.save(userModel);
+    }
+
+    public void resetPassword(String username) {
+        UserModel userModel = userModelRepository.findOneByUsername(username);
+        String password = RandomStringUtils.random(10, true, true);
+        userModel.setPassword(passwordEncoder.encode(password));
+        userModelRepository.save(userModel);
+		emailService.sendEmail(userModel.getEmail(), "Password reset", "Your new password is " + password);
     }
 }

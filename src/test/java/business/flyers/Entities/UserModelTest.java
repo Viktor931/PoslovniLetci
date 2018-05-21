@@ -10,6 +10,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 
+import static business.flyers.Constants.Constants.Login.MAX_FAILED_ATTEMPTS;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 @RunWith(MockitoJUnitRunner.class)
 public class UserModelTest {
     @InjectMocks
@@ -32,12 +36,21 @@ public class UserModelTest {
         userModel.setLoginKey("a");
         userModel.setSignUpDate(LocalDateTime.now());
         userModel.setLoginTime(LocalDateTime.now());
-        userModel.failedLogin();
         String test = "" + userModel.getEmail() + userModel.getFirstName() + userModel.getLastName() + userModel.getPassword() +
                 userModel.getUsername() + userModel.getUserGroup() + userModel.getId() + userModel.getRawPassword() +
                 userModel.getTwoStepLogin() + userModel.getLoginKey() + userModel.getSignUpDate() + userModel.getLoginTime();
 
         userModel.setActivationKey("key");
         Assert.assertFalse(userModel.isActivated()); //activation key isnt null
+    }
+
+    @Test
+    public void testLoginLock(){
+        for(int i = 0; i < MAX_FAILED_ATTEMPTS; i++){
+            userModel.failedLogin();
+        }
+        assertTrue(userModel.isLocked());
+        userModel.successfulLogin();
+        assertFalse(userModel.isLocked());
     }
 }

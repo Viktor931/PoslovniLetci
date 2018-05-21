@@ -14,6 +14,7 @@ import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import business.flyers.Constants.Constants;
 import business.flyers.Entities.UserModel;
@@ -39,6 +40,8 @@ public class DefaultUserDetailsServiceTest {
     private EmailService emailService;
     @Mock
     private UserModelPopulator userModelPopulator;
+    @Mock
+	private PasswordEncoder passwordEncoder;
 
     @Before
     public void before(){
@@ -126,4 +129,15 @@ public class DefaultUserDetailsServiceTest {
         defaultUserDetailsService.saveUser(new UserModel());
         verify(userModelRepository).save(any());
     }
+
+    @Test
+	public void testResetPassword() {
+    	UserModel userModel = mock(UserModel.class);
+    	when(userModelRepository.findOneByUsername("a")).thenReturn(userModel);
+		defaultUserDetailsService.resetPassword("a");
+    	verify(userModelRepository).findOneByUsername("a");
+    	verify(userModel).setPassword(any());
+    	verify(userModelRepository).save(userModel);
+    	verify(emailService).sendEmail(any(), any(), any());
+	}
 }

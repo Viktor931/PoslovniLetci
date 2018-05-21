@@ -57,7 +57,7 @@ public class SecurityConfig {
         protected void configure(HttpSecurity http) throws Exception {
             http
                     .authorizeRequests()
-                    .antMatchers("/registration/**").permitAll()
+                    .antMatchers("/registration/**", "/login/forgotten_password**").permitAll()
                     .anyRequest().authenticated()
                     .and()
                     .formLogin()
@@ -87,7 +87,7 @@ public class SecurityConfig {
         admin.setFirstName("admin");
         admin.setLastName("admin");
         admin.setUsername("admin");
-        admin.setEmail("admin");
+        admin.setEmail("vmalab@foi.hr");
         admin.setPassword(passwordEncoder.encode("admin"));
         admin.setUserGroup(Constants.User.Role.ADMIN);
         UserModel moderator = new UserModel();

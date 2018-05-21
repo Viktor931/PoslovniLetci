@@ -46,4 +46,10 @@ public class LoginControllerTest {
         verify(httpServletResponse).addCookie(any());
         Assert.assertNull(SecurityContextHolder.getContext().getAuthentication());
     }
+
+    @Test
+    public void testForgottenPassword() {
+    	loginController.forgottenPassword(mock(HttpServletResponse.class), "a");
+    	verify(defaultUserDetailsService).resetPassword("a");
+	}
 }

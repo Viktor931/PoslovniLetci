@@ -41,4 +41,10 @@ public class LoginController {
         httpServletResponse.addCookie(cookie);
         return new ModelAndView("home");
     }
+
+    @RequestMapping("/forgotten_password")
+    public ModelAndView forgottenPassword(HttpServletResponse httpServletResponse, @RequestParam String username) {
+    	defaultUserDetailsService.resetPassword(username);
+        return new ModelAndView("login");
+    }
 }
